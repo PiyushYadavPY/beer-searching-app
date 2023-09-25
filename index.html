@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>BeersByName</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>
+        <iconify-icon icon="emojione-monotone:clinking-beer-mugs"></iconify-icon>
+        BeersByName
+      </h1>
+    </div>
+
+    <div class="searchContainer">
+      <input
+        type="text"
+        id="searchInput"
+        class="searchInput"
+        placeholder="Search By Name"
+      />
+      <button id="resetBtn" onclick="resetCards()">Reset</button>
+    </div>
+
+    <div class="btn-group">
+      <button id="greaterThanButton" onclick="filterByAttenuation('greater')">
+        Greater Than
+      </button>
+      <button id="lowerThanButton" onclick="filterByAttenuation('lower')">
+        Lower Than
+      </button>
+      <button id="noneButton" onclick="filterByAttenuation('none')">
+        None
+      </button>
+      <input
+        class="sliders"
+        id="firstSlider"
+        type="range"
+        min="1"
+        max="100"
+        value="0"
+      />
+    </div>
+
+    <div class="checkBoxes">
+      <div class="phInput">
+        <input type="checkbox" id="phCheckbox" />
+        <label for="">PH</label>
+        <input
+          class="sliders"
+          id="phSlider"
+          type="range"
+          min="1"
+          max="7"
+          value="1"
+        />
+      </div>
+
+      <div class="srmInput">
+        <input type="checkbox" id="srm" />
+        <label for="">SRM</label>
+        <input
+          class="sliders"
+          id="srmSlider"
+          type="range"
+          min="1"
+          max="100"
+          value="1"
+        />
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="cardContainer" class="cardContainer"></div>
+    </div>
+
+    <div id="pagination" class="pagination">
+      <button id="prevButton">Prev</button>
+      <!-- <button id="pageNumber"></button> -->
+      <button id="nextButton">Next</button>
+    </div>
+
+    <footer class="footer">
+      <iconify-icon icon="bi:c-circle"></iconify-icon>
+      <label for="">Piyush Yadav</label>
+    </footer>
+    <script src="index.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  </body>
+</html>
